@@ -14,7 +14,12 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@marcolongo.cloud/common-ui": ["libs/common-ui/src/index.ts"],
+      "@marcolongo.cloud/common-ui/inputs": [
+        "libs/common-ui/inputs/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
