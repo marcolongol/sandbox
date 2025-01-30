@@ -1,5 +1,5 @@
 {
-  "name": "frontend",
+  "name": "@marcolongo.cloud/frontend",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "prefix": "app",
@@ -52,10 +52,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "buildTarget": "frontend:build:production"
+          "buildTarget": "@marcolongo.cloud/frontend:build:production"
         },
         "development": {
-          "buildTarget": "frontend:build:development"
+          "buildTarget": "@marcolongo.cloud/frontend:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -63,7 +63,7 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "buildTarget": "frontend:build"
+        "buildTarget": "@marcolongo.cloud/frontend:build"
       }
     },
     "lint": {
@@ -79,7 +79,7 @@
     "serve-static": {
       "executor": "@nx/web:file-server",
       "options": {
-        "buildTarget": "frontend:build",
+        "buildTarget": "@marcolongo.cloud/frontend:build",
         "port": 4200,
         "staticFilePath": "dist/apps/frontend/browser",
         "spa": true
@@ -90,8 +90,8 @@
       "options": {
         "port": 4400,
         "configDir": "apps/frontend/.storybook",
-        "browserTarget": "frontend:build",
-        "styles": "src/styles.css",
+        "browserTarget": "@marcolongo.cloud/frontend:build",
+        "styles": ["apps/frontend/src/styles.css"],
         "compodoc": false
       },
       "configurations": {
@@ -106,8 +106,8 @@
       "options": {
         "outputDir": "dist/storybook/frontend",
         "configDir": "apps/frontend/.storybook",
-        "browserTarget": "frontend:build",
-        "styles": "src/styles.css",
+        "browserTarget": "@marcolongo.cloud/frontend:build",
+        "styles": ["apps/frontend/src/styles.css"],
         "compodoc": false
       },
       "configurations": {
@@ -126,13 +126,13 @@
       "executor": "@nx/web:file-server",
       "dependsOn": ["build-storybook"],
       "options": {
-        "buildTarget": "frontend:build-storybook",
+        "buildTarget": "@marcolongo.cloud/frontend:build-storybook",
         "staticFilePath": "dist/storybook/frontend",
         "spa": true
       },
       "configurations": {
         "ci": {
-          "buildTarget": "frontend:build-storybook:ci"
+          "buildTarget": "@marcolongo.cloud/frontend:build-storybook:ci"
         }
       }
     }

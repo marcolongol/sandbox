@@ -1,5 +1,5 @@
 {
-  "name": "common-ui",
+  "name": "@marcolongo.cloud/common-ui",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/common-ui/src",
   "prefix": "common-ui",
@@ -37,7 +37,7 @@
       "options": {
         "port": 4400,
         "configDir": "libs/common-ui/.storybook",
-        "browserTarget": "common-ui:build-storybook",
+        "browserTarget": "@marcolongo.cloud/common-ui:build-storybook",
         "compodoc": false,
         "styles": ["libs/common-ui/src/styles/default.scss"]
       },
@@ -53,8 +53,9 @@
       "options": {
         "outputDir": "dist/storybook/common-ui",
         "configDir": "libs/common-ui/.storybook",
-        "browserTarget": "common-ui:build-storybook",
-        "compodoc": false
+        "browserTarget": "@marcolongo.cloud/common-ui:build-storybook",
+        "compodoc": false,
+        "styles": ["libs/common-ui/src/styles/default.scss"]
       },
       "configurations": {
         "ci": {
@@ -72,13 +73,13 @@
       "executor": "@nx/web:file-server",
       "dependsOn": ["build-storybook"],
       "options": {
-        "buildTarget": "common-ui:build-storybook",
+        "buildTarget": "@marcolongo.cloud/common-ui:build-storybook",
         "staticFilePath": "dist/storybook/common-ui",
         "spa": true
       },
       "configurations": {
         "ci": {
-          "buildTarget": "common-ui:build-storybook:ci"
+          "buildTarget": "@marcolongo.cloud/common-ui:build-storybook:ci"
         }
       }
     }
