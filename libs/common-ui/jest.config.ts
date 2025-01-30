@@ -1,4 +1,6 @@
-export default {
+import { Config } from 'jest';
+
+const config: Config = {
   displayName: 'common-ui',
   preset: '../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
@@ -19,3 +21,5 @@ export default {
     'jest-preset-angular/build/serializers/html-comment',
   ],
 };
+
+export default config;
