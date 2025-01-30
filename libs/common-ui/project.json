@@ -39,7 +39,7 @@
         "configDir": "libs/common-ui/.storybook",
         "browserTarget": "@marcolongo.cloud/common-ui:build-storybook",
         "compodoc": false,
-        "styles": ["libs/common-ui/src/styles/default.scss"]
+        "styles": ["libs/common-ui/main.scss"]
       },
       "configurations": {
         "ci": {
@@ -55,7 +55,7 @@
         "configDir": "libs/common-ui/.storybook",
         "browserTarget": "@marcolongo.cloud/common-ui:build-storybook",
         "compodoc": false,
-        "styles": ["libs/common-ui/src/styles/default.scss"]
+        "styles": ["libs/common-ui/main.scss"]
       },
       "configurations": {
         "ci": {

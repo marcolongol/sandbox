@@ -1,1 +1,1 @@
-export * from './combobox/combobox.component';
+export * from './lib/components/combobox/combobox.component';
