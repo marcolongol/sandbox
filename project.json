@@ -3,5 +3,21 @@
   "$schema": "./node_modules/nx/schemas/project-schema.json",
   "sourceRoot": ".",
   "tags": [],
-  "targets": {}
+  "targets": {
+    "helm": {
+      "executor": "@nx-extensions/helm:package",
+      "outputs": ["{options.outputFolder}"],
+      "options": {
+        "chartFolder": "./chart",
+        "outputFolder": "{workspaceRoot}/dist/charts/{projectRoot}",
+        "push": false,
+        "remote": "oci://localhost:5000/helm-charts",
+        "dependencies": {
+          "update": true,
+          "build": true,
+          "repositories": []
+        }
+      }
+    }
+  }
 }

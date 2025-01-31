@@ -32,6 +32,9 @@ importers:
       '@angular/router':
         specifier: ~19.1.0
         version: 19.1.4(@angular/common@19.1.4(@angular/core@19.1.4(rxjs@7.8.1)(zone.js@0.15.0))(rxjs@7.8.1))(@angular/core@19.1.4(rxjs@7.8.1)(zone.js@0.15.0))(@angular/platform-browser@19.1.4(@angular/animations@19.1.4(@angular/core@19.1.4(rxjs@7.8.1)(zone.js@0.15.0)))(@angular/common@19.1.4(@angular/core@19.1.4(rxjs@7.8.1)(zone.js@0.15.0))(rxjs@7.8.1))(@angular/core@19.1.4(rxjs@7.8.1)(zone.js@0.15.0)))(rxjs@7.8.1)
+      '@nx-extensions/helm':
+        specifier: ^1.0.0
+        version: 1.0.0(@nx/devkit@20.4.0(nx@20.4.0(@swc-node/register@1.9.2(@swc/core@1.5.29(@swc/helpers@0.5.15))(@swc/types@0.1.17)(typescript@5.7.3))(@swc/core@1.5.29(@swc/helpers@0.5.15))))(nx@20.4.0(@swc-node/register@1.9.2(@swc/core@1.5.29(@swc/helpers@0.5.15))(@swc/types@0.1.17)(typescript@5.7.3))(@swc/core@1.5.29(@swc/helpers@0.5.15)))
       '@progress/kendo-angular-dropdowns':
         specifier: ^18.0.0
         version: 18.0.0(dokiprww67vzcgq2bchejqra5e)
@@ -209,6 +212,12 @@ importers:
         version: 8.22.0(eslint@9.19.0(jiti@1.21.7))(typescript@5.7.3)
 
 packages:
+
+  '@actions/exec@1.1.1':
+    resolution: {integrity: sha512-+sCcHHbVdk93a0XT19ECtO/gIXoxvdsgQLzb2fE2/5sIZmWQuluYyjPQtrtTHdU1YzTZ7bAPN4sITq2xi1679w==}
+
+  '@actions/io@1.1.3':
+    resolution: {integrity: sha512-wi9JjgKLYS7U/z8PPbco+PvTb/nRWjeoFlJ1Qer83k/3C5PHQi28hiVdeE2kHXmIL99mQFawx8qt/JPjZilJ8Q==}
 
   '@adobe/css-tools@4.3.3':
     resolution: {integrity: sha512-rE0Pygv0sEZ4vBWHlAgJLGDU7Pm8xoO6p3wsEceb7GYAjScrOHpEo8KK/eVkAcnSM+slAEtXjA2JpdjLp4fJQQ==}
@@ -2022,6 +2031,14 @@ packages:
   '@npmcli/run-script@9.0.2':
     resolution: {integrity: sha512-cJXiUlycdizQwvqE1iaAb4VRUM3RX09/8q46zjvy+ct9GhfZRWd7jXYVc1tn/CfRlGPVkX/u4sstRlepsm7hfw==}
     engines: {node: ^18.17.0 || >=20.5.0}
+
+  '@nx-extensions/core@1.0.0':
+    resolution: {integrity: sha512-9St9iWsvvDCptLaM/aF18eI07+Wxxj71mRKTBtXlO1I6wWXL+TmwYNkERonHQoI6Tt+h4Z0nmlY7sQ2Di93hfQ==}
+
+  '@nx-extensions/helm@1.0.0':
+    resolution: {integrity: sha512-6QqC3YJCzPK1/sVRDVliOJBLHogZiJ5bjGJ7CSjSyqwstLmKtzliCsvH900kkyXJsM9mdMaUDlOAOt7Fxj+xVw==}
+    peerDependencies:
+      '@nx/devkit': ^19.6.4 || ^20.0.0
 
   '@nx/angular@20.4.0':
     resolution: {integrity: sha512-eD74pWUPxWKUUxf3lBpRskzeM2VoV9wOM/HcVc2zBWCVwVoAfpBNZkajIvePuqOZ+AnMNC1IuC9C9RQK0g0/Tw==}
@@ -6981,6 +6998,11 @@ packages:
     engines: {node: '>=10.13.0'}
     hasBin: true
 
+  prettier@3.4.2:
+    resolution: {integrity: sha512-e9MewbtFo+Fevyuxn/4rrcDAaq0IYxPGLvObpQjiZBMAzB9IGmzlnG9RZy3FFas+eBMu2vA0CszMeduow5dIuQ==}
+    engines: {node: '>=14'}
+    hasBin: true
+
   pretty-error@4.0.0:
     resolution: {integrity: sha512-AoJ5YMAcXKYxKhuJGdcvse+Voc6v1RgnsR3nWcYU7q4t6z0Q6T86sv5Zq8VIRbOWWFpvdGE83LtdSMNd+6Y0xw==}
 
@@ -8485,6 +8507,12 @@ packages:
     resolution: {integrity: sha512-9oxn0IIjbCZkJ67L+LkhYWRyAy7axphb3VgE2MBDlOqnmHMPWGYMxJxBYFueFq/JGY2GMwS0rU+UCLunEmy5UA==}
 
 snapshots:
+
+  '@actions/exec@1.1.1':
+    dependencies:
+      '@actions/io': 1.1.3
+
+  '@actions/io@1.1.3': {}
 
   '@adobe/css-tools@4.3.3': {}
 
@@ -11147,6 +11175,24 @@ snapshots:
     transitivePeerDependencies:
       - bluebird
       - supports-color
+
+  '@nx-extensions/core@1.0.0(nx@20.4.0(@swc-node/register@1.9.2(@swc/core@1.5.29(@swc/helpers@0.5.15))(@swc/types@0.1.17)(typescript@5.7.3))(@swc/core@1.5.29(@swc/helpers@0.5.15)))':
+    dependencies:
+      '@actions/exec': 1.1.1
+      '@nx/devkit': 20.4.0(nx@20.4.0(@swc-node/register@1.9.2(@swc/core@1.5.29(@swc/helpers@0.5.15))(@swc/types@0.1.17)(typescript@5.7.3))(@swc/core@1.5.29(@swc/helpers@0.5.15)))
+      prettier: 3.4.2
+      tslib: 2.8.1
+    transitivePeerDependencies:
+      - nx
+
+  '@nx-extensions/helm@1.0.0(@nx/devkit@20.4.0(nx@20.4.0(@swc-node/register@1.9.2(@swc/core@1.5.29(@swc/helpers@0.5.15))(@swc/types@0.1.17)(typescript@5.7.3))(@swc/core@1.5.29(@swc/helpers@0.5.15))))(nx@20.4.0(@swc-node/register@1.9.2(@swc/core@1.5.29(@swc/helpers@0.5.15))(@swc/types@0.1.17)(typescript@5.7.3))(@swc/core@1.5.29(@swc/helpers@0.5.15)))':
+    dependencies:
+      '@nx-extensions/core': 1.0.0(nx@20.4.0(@swc-node/register@1.9.2(@swc/core@1.5.29(@swc/helpers@0.5.15))(@swc/types@0.1.17)(typescript@5.7.3))(@swc/core@1.5.29(@swc/helpers@0.5.15)))
+      '@nx/devkit': 20.4.0(nx@20.4.0(@swc-node/register@1.9.2(@swc/core@1.5.29(@swc/helpers@0.5.15))(@swc/types@0.1.17)(typescript@5.7.3))(@swc/core@1.5.29(@swc/helpers@0.5.15)))
+      js-yaml: 4.1.0
+      tslib: 2.8.1
+    transitivePeerDependencies:
+      - nx
 
   '@nx/angular@20.4.0(@angular-devkit/build-angular@19.1.5(3vq5wjzixo2jdy742uvd6e2vda))(@angular-devkit/core@19.1.5(chokidar@4.0.3))(@angular-devkit/schematics@19.1.5(chokidar@4.0.3))(@babel/traverse@7.26.7)(@rspack/core@1.2.2(@swc/helpers@0.5.15))(@schematics/angular@19.1.5(chokidar@4.0.3))(@swc-node/register@1.9.2(@swc/core@1.5.29(@swc/helpers@0.5.15))(@swc/types@0.1.17)(typescript@5.7.3))(@swc/core@1.5.29(@swc/helpers@0.5.15))(@swc/helpers@0.5.15)(@types/node@18.19.74)(@zkochan/js-yaml@0.0.7)(esbuild@0.24.2)(eslint@9.19.0(jiti@1.21.7))(html-webpack-plugin@5.6.3(@rspack/core@1.2.2(@swc/helpers@0.5.15))(webpack@5.97.1(@swc/core@1.5.29(@swc/helpers@0.5.15))(esbuild@0.24.2)))(nx@20.4.0(@swc-node/register@1.9.2(@swc/core@1.5.29(@swc/helpers@0.5.15))(@swc/types@0.1.17)(typescript@5.7.3))(@swc/core@1.5.29(@swc/helpers@0.5.15)))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rxjs@7.8.1)(typescript@5.7.3)':
     dependencies:
@@ -17306,6 +17352,8 @@ snapshots:
   prelude-ls@1.2.1: {}
 
   prettier@2.8.8: {}
+
+  prettier@3.4.2: {}
 
   pretty-error@4.0.0:
     dependencies:
