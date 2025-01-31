@@ -30,7 +30,7 @@ jobs:
           node-version: 20
           cache: 'npm'
 
-      - run: npm ci --legacy-peer-deps
+      - run: pnpm install --frozen-lockfile
       - run: npx playwright install --with-deps
       - uses: nrwl/nx-set-shas@v4
 
