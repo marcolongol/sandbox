@@ -6,6 +6,12 @@
   "projectType": "library",
   "tags": [],
   "targets": {
+    "precompile": {
+      "executor": "nx:run-script",
+      "options": {
+        "script": "precompile"
+      }
+    },
     "build": {
       "executor": "@nx/angular:package",
       "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
