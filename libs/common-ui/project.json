@@ -26,7 +26,8 @@
           "tsConfig": "libs/common-ui/tsconfig.lib.json"
         }
       },
-      "defaultConfiguration": "production"
+      "defaultConfiguration": "production",
+      "dependsOn": ["precompile"]
     },
     "test": {
       "executor": "@nx/jest:jest",
