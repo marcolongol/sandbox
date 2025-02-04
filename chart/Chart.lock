@@ -1,0 +1,6 @@
+dependencies:
+- name: frontend
+  repository: file://../apps/frontend/chart
+  version: 0.1.0
+digest: sha256:a6ab09a4f31740febf3068252e89107d83b2fc35ee50dd7a5d4f755f5bbde2b3
+generated: "2025-02-04T00:32:51.6801647-08:00"
