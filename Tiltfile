@@ -23,7 +23,6 @@ cfg = config.parse()
 
 # SECTION: Frotend
 # ----------------
-
 docker_build(
     "frontend",
     context=".",
@@ -51,12 +50,11 @@ local_resource(
     auto_init=False,
 )
 
-# SECTION K8s
+# SECTION: K8s
 # -----------
 k8s_yaml(
     helm(
         "./chart",
-        "marcolongo-cloud",
         "marcolongo-cloud",
         values=[VALUES_DICT[cfg.get("env", "LOCAL")]],
     )
