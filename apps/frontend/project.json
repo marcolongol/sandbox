@@ -13,7 +13,7 @@
         "outputPath": "dist/apps/frontend",
         "index": "apps/frontend/src/index.html",
         "browser": "apps/frontend/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": ["apps/frontend/src/polyfills.ts"],
         "tsConfig": "apps/frontend/tsconfig.app.json",
         "assets": [
           {
@@ -21,7 +21,10 @@
             "input": "apps/frontend/public"
           }
         ],
-        "styles": ["apps/frontend/src/styles.css"],
+        "styles": ["apps/frontend/src/styles.scss"],
+        "stylePreprocessorOptions": {
+          "includePaths": ["libs/common-ui/src/styles"]
+        },
         "scripts": []
       },
       "configurations": {
@@ -91,7 +94,8 @@
         "port": 4400,
         "configDir": "apps/frontend/.storybook",
         "browserTarget": "@marcolongo.cloud/frontend:build",
-        "styles": ["apps/frontend/src/styles.css"],
+        "styles": ["apps/frontend/src/styles.scss"],
+        "debugWebpack": true,
         "compodoc": false
       },
       "configurations": {
@@ -107,7 +111,8 @@
         "outputDir": "dist/storybook/frontend",
         "configDir": "apps/frontend/.storybook",
         "browserTarget": "@marcolongo.cloud/frontend:build",
-        "styles": ["apps/frontend/src/styles.css"],
+        "styles": ["apps/frontend/src/styles.scss"],
+        "debugWebpack": true,
         "compodoc": false
       },
       "configurations": {
