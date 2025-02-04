@@ -17,7 +17,8 @@
           "build": true,
           "repositories": []
         }
-      }
+      },
+      "dependsOn": ["@marcolongo.cloud/frontend:helm"]
     }
   }
 }
