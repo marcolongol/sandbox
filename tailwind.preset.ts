@@ -16,10 +16,14 @@ const baseConfig: Config = {
     },
   },
   plugins: [
+    require('daisyui'),
     require('@tailwindcss/typography'),
     require('@tailwindcss/forms'),
     require('@tailwindcss/aspect-ratio'),
   ],
+  daisyui: {
+    themes: ['light', 'dark'],
+  },
 };
 
 export default baseConfig;

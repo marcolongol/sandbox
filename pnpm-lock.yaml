@@ -126,6 +126,9 @@ importers:
       '@storybook/addon-interactions':
         specifier: ^8.4.6
         version: 8.5.2(storybook@8.5.2(prettier@2.8.8))
+      '@storybook/addon-themes':
+        specifier: ^8.5.3
+        version: 8.5.3(storybook@8.5.2(prettier@2.8.8))
       '@storybook/angular':
         specifier: 8.5.2
         version: 8.5.2(r3blvr6awl5mcxneniq3hvqegi)
@@ -168,6 +171,9 @@ importers:
       autoprefixer:
         specifier: ^10.4.0
         version: 10.4.20(postcss@8.5.1)
+      daisyui:
+        specifier: ^4.12.23
+        version: 4.12.23(postcss@8.5.1)
       eslint:
         specifier: ^9.8.0
         version: 9.19.0(jiti@2.4.2)
@@ -3016,6 +3022,11 @@ packages:
     peerDependencies:
       storybook: ^8.5.2
 
+  '@storybook/addon-themes@8.5.3':
+    resolution: {integrity: sha512-wGlrAxU/9WF/CA4EV9VDzWbi4fPKdUweHmAPcnuiU0xG/zEIIL4o2fDr0+9tTctjJfVHgkrsHk74BpP14j+p9g==}
+    peerDependencies:
+      storybook: ^8.5.3
+
   '@storybook/addon-toolbars@8.5.2':
     resolution: {integrity: sha512-gHQtVCiq7HRqdYQLOmX8nhtV1Lqz4tOCj4BVodwwf8fUcHyNor+2FvGlQjngV2pIeCtxiM/qmG63UpTBp57ZMA==}
     peerDependencies:
@@ -4436,6 +4447,9 @@ packages:
   css-select@5.1.0:
     resolution: {integrity: sha512-nwoRF1rvRRnnCqqY7updORDsuqKzqYJ28+oSMaJMMgOauh3fvwHqMS7EZpIPqK8GL+g9mKxF1vP/ZjSeNjEVHg==}
 
+  css-selector-tokenizer@0.8.0:
+    resolution: {integrity: sha512-Jd6Ig3/pe62/qe5SBPTN8h8LeUg/pT4lLgtavPf7updwwHpvFzxvOQBHYj2LZDMjUnBzgvIUSjRcf6oT5HzHFg==}
+
   css-tree@2.2.1:
     resolution: {integrity: sha512-OA0mILzGc1kCOCSJerOeqDxDQ4HOh+G8NbOJFOTgOCzpw7fCBubk0fEyxp8AgOL/jvLgYA/uV0cMbe43ElF1JA==}
     engines: {node: ^10 || ^12.20.0 || ^14.13.0 || >=15.0.0, npm: '>=7.0.0'}
@@ -4497,9 +4511,17 @@ packages:
   cuint@0.2.2:
     resolution: {integrity: sha512-d4ZVpCW31eWwCMe1YT3ur7mUDnTXbgwyzaL320DrcRT45rfjYxkt5QWLrmOJ+/UEAI2+fQgKe/fCjR8l4TpRgw==}
 
+  culori@3.3.0:
+    resolution: {integrity: sha512-pHJg+jbuFsCjz9iclQBqyL3B2HLCBF71BwVNujUYEvCeQMvV97R59MNK3R2+jgJ3a1fcZgI9B3vYgz8lzr/BFQ==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+
   cwd@0.10.0:
     resolution: {integrity: sha512-YGZxdTTL9lmLkCUTpg4j0zQ7IhRB5ZmqNBbGCl3Tg6MP/d5/6sY7L5mmTjzbc6JKgVZYiqTQTNhPFsbXNGlRaA==}
     engines: {node: '>=0.8'}
+
+  daisyui@4.12.23:
+    resolution: {integrity: sha512-EM38duvxutJ5PD65lO/AFMpcw+9qEy6XAZrTpzp7WyaPeO/l+F/Qiq0ECHHmFNcFXh5aVoALY4MGrrxtCiaQCQ==}
+    engines: {node: '>=16.9.0'}
 
   data-urls@3.0.2:
     resolution: {integrity: sha512-Jy/tj3ldjZJo63sVAvg6LHt2mHvl4V6AgRAmNDtLdm7faqtsx+aJG42rsyCo9JCoRVKwPFzKlIPx3DIibwSIaQ==}
@@ -5044,6 +5066,9 @@ packages:
 
   fast-uri@3.0.6:
     resolution: {integrity: sha512-Atfo14OibSv5wAp4VWNsFYE1AchQRTv9cBGWET4pZWHzYshFSS9NQI6I57rdKn9croWVMbYFbLhJ+yJvmZIIHw==}
+
+  fastparse@1.1.2:
+    resolution: {integrity: sha512-483XLLxTVIwWK3QTrMGRqUfUpoOs/0hbQrl2oz4J0pAcm3A3bu84wxTFqGqkJzewCLdME38xJLJAxBABfQT8sQ==}
 
   fastq@1.18.0:
     resolution: {integrity: sha512-QKHXPW0hD8g4UET03SdOdunzSouc9N4AuHdsX8XNcTsuz+yYFILVNIX4l9yHABMhiEI9Db0JTTIpu0wB+Y1QQw==}
@@ -12917,6 +12942,11 @@ snapshots:
       storybook: 8.5.2(prettier@2.8.8)
       ts-dedent: 2.2.0
 
+  '@storybook/addon-themes@8.5.3(storybook@8.5.2(prettier@2.8.8))':
+    dependencies:
+      storybook: 8.5.2(prettier@2.8.8)
+      ts-dedent: 2.2.0
+
   '@storybook/addon-toolbars@8.5.2(storybook@8.5.2(prettier@2.8.8))':
     dependencies:
       storybook: 8.5.2(prettier@2.8.8)
@@ -14643,6 +14673,11 @@ snapshots:
       domutils: 3.2.2
       nth-check: 2.1.1
 
+  css-selector-tokenizer@0.8.0:
+    dependencies:
+      cssesc: 3.0.0
+      fastparse: 1.1.2
+
   css-tree@2.2.1:
     dependencies:
       mdn-data: 2.0.28
@@ -14721,10 +14756,21 @@ snapshots:
 
   cuint@0.2.2: {}
 
+  culori@3.3.0: {}
+
   cwd@0.10.0:
     dependencies:
       find-pkg: 0.1.2
       fs-exists-sync: 0.1.0
+
+  daisyui@4.12.23(postcss@8.5.1):
+    dependencies:
+      css-selector-tokenizer: 0.8.0
+      culori: 3.3.0
+      picocolors: 1.1.1
+      postcss-js: 4.0.1(postcss@8.5.1)
+    transitivePeerDependencies:
+      - postcss
 
   data-urls@3.0.2:
     dependencies:
@@ -15345,6 +15391,8 @@ snapshots:
   fast-levenshtein@2.0.6: {}
 
   fast-uri@3.0.6: {}
+
+  fastparse@1.1.2: {}
 
   fastq@1.18.0:
     dependencies:
