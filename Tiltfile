@@ -27,10 +27,21 @@ docker_build(
     "frontend",
     context=".",
     dockerfile="apps/frontend/Dockerfile",
-    only=["./dist/apps/frontend/browser"],
-    live_update=[
-        sync("./dist/apps/frontend/browser", "/usr/share/nginx/html"),
+    only=[
+        "apps/frontend",
+        "eslint.config.mjs",
+        "libs",
+        "nx.json",
+        "package.json",
+        "pnpm-lock.yaml",
+        "tailwind.preset.ts",
+        "tsconfig.base.json",
     ],
+    live_update=[
+        sync("./apps/frontend", "/app/apps/frontend"),
+        sync("./libs", "/app/libs"),
+    ],
+    target="dev",
 )
 
 local_resource(

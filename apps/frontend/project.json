@@ -58,7 +58,12 @@
           "buildTarget": "@marcolongo.cloud/frontend:build:production"
         },
         "development": {
-          "buildTarget": "@marcolongo.cloud/frontend:build:development"
+          "buildTarget": "@marcolongo.cloud/frontend:build:development",
+          "port": 80,
+          "hmr": true,
+          "liveReload": true,
+          "watch": true,
+          "host": "0.0.0.0"
         }
       },
       "defaultConfiguration": "development"
