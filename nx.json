@@ -96,5 +96,24 @@
     "@nx/angular:component": {
       "style": "scss"
     }
+  },
+  "release": {
+    "projectsRelationship": "independent",
+    "releaseTagPattern": "release/{projectName}/{version}",
+    "projects": ["apps/frontend", "libs/common-ui"],
+    "changelog": {
+      "projectChangelogs": {
+        "entryWhenNoChanges": false,
+        "renderOptions": {
+          "authors": true,
+          "mapAuthorsToGitHubUsernames": true,
+          "commitReferences": true,
+          "versionTitleDate": true
+        }
+      }
+    },
+    "version": {
+      "conventionalCommits": true
+    }
   }
 }
