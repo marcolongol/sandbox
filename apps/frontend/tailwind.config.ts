@@ -4,6 +4,7 @@ import { createGlobPatternsForDependencies } from '@nx/angular/tailwind';
 
 import { Config } from 'tailwindcss';
 
+// eslint-disable-next-line @nx/enforce-module-boundaries
 import baseConfig from '../../tailwind.preset';
 
 const config: Config = {
