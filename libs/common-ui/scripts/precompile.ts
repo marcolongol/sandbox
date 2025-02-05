@@ -1,4 +1,4 @@
-// eslint-disable-next-line @nx/enforce-module-boundaries
+ 
 import { sync } from 'glob';
 
 import { exec } from 'child_process';
