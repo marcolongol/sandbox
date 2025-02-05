@@ -42,7 +42,7 @@
     "storybook": {
       "executor": "@storybook/angular:start-storybook",
       "options": {
-        "port": 4400,
+        "port": 4410,
         "configDir": "libs/common-ui/.storybook",
         "browserTarget": "@marcolongo.cloud/common-ui:build-storybook",
         "compodoc": false,

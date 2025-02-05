@@ -50,6 +50,22 @@ local_resource(
     auto_init=False,
 )
 
+local_resource(
+    "frontend:storybook",
+    serve_cmd="npx nx run @marcolongo.cloud/frontend:storybook",
+    labels=["frontend"],
+    trigger_mode=TRIGGER_MODE_AUTO,
+    auto_init=False,
+)
+
+local_resource(
+    "common-ui:storybook",
+    serve_cmd="npx nx run @marcolongo.cloud/common-ui:storybook",
+    labels=["common-ui"],
+    trigger_mode=TRIGGER_MODE_AUTO,
+    auto_init=False,
+)
+
 # SECTION: K8s
 # -----------
 k8s_yaml(
