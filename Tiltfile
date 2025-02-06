@@ -55,7 +55,7 @@ local_resource(
 
 local_resource(
     "frontend:build:dev",
-    serve_cmd="npx nx run @marcolongo.cloud/frontend:build -- --watch",
+    serve_cmd="npx nx run @marcolongo.cloud/frontend:build:development -- --watch",
     labels=["frontend"],
     trigger_mode=TRIGGER_MODE_AUTO,
     auto_init=False,

@@ -5,7 +5,7 @@ RUN npm install -g pnpm
 RUN pnpm install --frozen-lockfile
 COPY apps/frontend ./apps/frontend
 COPY libs ./libs
-CMD ["pnpm", "nx", "serve", "frontend"]
+CMD ["pnpm", "nx", "run", "@marcolongo.cloud/frontend:serve:development"]
 
 FROM docker.io/nginx:stable-alpine as prod
 COPY dist/apps/frontend/browser/* /usr/share/nginx/html/

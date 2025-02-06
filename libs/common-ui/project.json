@@ -10,6 +10,11 @@
       "executor": "nx:run-script",
       "options": {
         "script": "precompile"
+      },
+      "configurations": {
+        "development": {
+          "script": ""
+        }
       }
     },
     "build": {
