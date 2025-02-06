@@ -21,34 +21,56 @@
         tabindex="0"
         class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
       >
-        <li><a>Item 1</a></li>
+        @for (navLink of navLinks(); track navLink.label){
         <li>
-          <a>Parent</a>
+          <a [routerLink]="navLink.url" routerLinkActive="active">
+            {{ navLink.label }}
+          </a>
+          @if(navLink.items){
           <ul class="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
+            @for (item of navLink.items; track item.label){
+            <li>
+              j
+              <a [routerLink]="item.url" routerLinkActive="active">{{
+                item.label
+              }}</a>
+            </li>
+            }
           </ul>
+          }
         </li>
-        <li><a>Item 3</a></li>
+        }
       </ul>
     </div>
-    <a class="btn btn-ghost text-xl hover:underline hidden lg:flex" href="/"
-      >Lucas Marcolongo</a
-    >
+    <a class="btn btn-ghost text-xl hover:underline lg:flex" href="/">{{
+      title()
+    }}</a>
   </div>
   <div class="navbar-center hidden lg:flex">
     <ul class="menu menu-horizontal px-1">
-      <li><a>Item 1</a></li>
+      @for ( navLink of navLinks(); track navLink.label){ @if (!navLink.items )
+      {
+      <li>
+        <a [routerLink]="navLink.url" routerLinkActive="active">
+          {{ navLink.label }}
+        </a>
+      </li>
+      } @else {
       <li>
         <details>
-          <summary>Parent</summary>
+          <summary>{{ navLink.label }}</summary>
           <ul class="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
+            @for (item of navLink.items; track item.label){
+            <li>
+              <a [routerLink]="item.url" routerLinkActive="active">{{
+                item.label
+              }}</a>
+            </li>
+            }
           </ul>
         </details>
       </li>
-      <li><a>Item 3</a></li>
+      } }
     </ul>
   </div>
   <div class="navbar-end"></div>

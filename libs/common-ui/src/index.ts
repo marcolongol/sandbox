@@ -1,1 +1,1 @@
-export { HeaderComponent } from './lib/header/header.component';
+export { HeaderComponent, NavLink } from './lib/header/header.component';

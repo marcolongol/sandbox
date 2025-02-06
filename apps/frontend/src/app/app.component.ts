@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { HeaderComponent } from '@marcolongo.cloud/common-ui';
+import { HeaderComponent, NavLink } from '@marcolongo.cloud/common-ui';
 
 @Component({
   imports: [RouterModule, HeaderComponent],
@@ -8,4 +8,33 @@ import { HeaderComponent } from '@marcolongo.cloud/common-ui';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent {}
+export class AppComponent {
+  public navLinks: NavLink[] = [
+    {
+      label: 'Home',
+      url: '/home',
+      icon: 'home',
+    },
+    {
+      label: 'About',
+      icon: 'article',
+      items: [
+        {
+          label: 'Me',
+          url: '/about/me',
+          icon: 'person',
+        },
+        {
+          label: 'Company',
+          url: '/about/company',
+          icon: 'business',
+        },
+      ],
+    },
+    {
+      label: 'Contact',
+      icon: 'email',
+      url: '/contact',
+    },
+  ];
+}
